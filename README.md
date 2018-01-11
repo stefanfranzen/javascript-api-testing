@@ -1,3 +1,3 @@
-# checking
+# javascript-api-testing
 
-A playground project for testing and checking.
+An experiment with the javascripts frameworks `mocha`, `chai` and `chai-http`
