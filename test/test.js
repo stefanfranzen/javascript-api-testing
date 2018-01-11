@@ -1,36 +1,20 @@
+import chai from 'chai';
+import { expect } from 'chai';
+import chaiHttp from 'chai-http';
 
-var chai = require('chai');
-var chaiHttp = require('chai-http'); 
 chai.use(chaiHttp); 
 
-var baseurl = 'http://favoritehotelsapi.' + env + '.int';
-var env = 'dev';
-//var env = 'test';
-//var env = 'acctest';
-//var env = 'prod';
+const beerBaseUrl = 'https://api.punkapi.com/v2';
 
-describe('Simple http requests', function () {
-
-	// http://favoritehotelsapi.acctest.int
-	it('should get simplest http to favorites baseurl', function () {
-		chai.request(baseurl)
-		  .get('/')
-		  .end(function (err, res) {
-		     expect(err).to.be.null;
-		     expect(res).to.have.status(200);
-		  });
-	})
-
-	// http://favoritehotelsapi.acctest.int/favoritehotels/get/v2/7311332/1?callback=jQuery1111005372513617574226_1488267012255&_=1488267012256
-	it('should get hotels from specific user', function () {
-		
-		chai.request(baseurl) 
-		  .get('/favoritehotels/get/v2/7311332/1')
-		  .query({callback: 'jQuery1111005372513617574226_1488267012255', _: '1488267012256'})
-		  .end(function (err, res) {
-		     expect(err).to.be.null;
-		     expect(res).to.have.status(200);
-		  });
-	})
-	
-})
+describe('Testing Beers', function() {
+    it('should get a specific beer', function() {
+        return chai.request(beerBaseUrl)
+            .get('/beers')
+            .set('Accept', 'application/json')
+            .query({'ids': '1'})
+            .then(function(response) {
+                expect(response).to.be.json;
+                expect(response.body[0].id).to.equal(1);
+            })
+    });
+});

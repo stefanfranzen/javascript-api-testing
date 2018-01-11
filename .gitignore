@@ -1,2 +1,8 @@
+# IDE
 .idea
+
+# NodeJS
 /node_modules/
+
+# Reports
+/mochawesome-report/

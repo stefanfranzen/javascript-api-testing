@@ -1,26 +1,19 @@
 {
   "name": "Checking",
   "version": "1.0.0",
-  "description": "A playground project for new ideas",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
+  "description": "Experimenting with api-testing in javascript",
+  "author": "Stefan Jansson",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sjansson/checking.git"
   },
-  "keywords": [
-    "mocha",
-    "chai-http"
-  ],
-  "author": "Stefan Jansson",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sjansson/checking/issues"
+  "scripts": {
+    "test": "mocha --compilers js:babel-register"
   },
-  "homepage": "https://github.com/sjansson/checking#readme",
-  "dependencies": {
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "mocha": "^3.2.0"
