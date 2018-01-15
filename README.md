@@ -1,6 +1,9 @@
 # javascript-api-testing [![Build Status](https://travis-ci.org/sjansson/javascript-api-testing.png?branch=master)](https://travis-ci.org/sjansson/javascript-api-testing)
 
-An experiment with the javascripts frameworks `mocha`, `chai`, `chai-http` running with `gulp` and support of parameters for test-environments and testfiles
+A javascript framework consisted of `mocha`, `chai` and `chai-http`. Running with `gulp` with support of parameters for test-environments and all or single testfiles.
+
+### prerequisites
+* nodejs installed
 
 ### installation
 `npm install`
