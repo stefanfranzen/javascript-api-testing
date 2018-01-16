@@ -5,8 +5,7 @@ const argv = require('yargs').argv;
 
 gulp.task('test-api', () => {
   process.env.env = argv.env;
-  let testsToRun;
-  argv.spec ? testsToRun = '/test/' + argv.spec : testsToRun = '/test/*.test.js';
+  const testsToRun = argv.spec ? 'test/' + argv.spec : 'test/*.test.js'
 
   gulp.src(testsToRun, {read: false})
     .pipe(sourcemaps.init())
