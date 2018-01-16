@@ -22,4 +22,4 @@ a testsuite: `gulp test-api --env <yourEnvironment> --spec <yourSuiteFolder>/*.t
 * create a freestyle job
 * connect your github repository
 * setup batch/sh: `npm install`
-* setup batch/sh: `/node_modules/gulp/gulp.js gulp test-api --env staging --spec myFolder/myAwesomeTest.test.js` 
+* setup batch/sh: `/node_modules/gulp/gulp.js gulp test-api --env <yourEnvironment>` 
