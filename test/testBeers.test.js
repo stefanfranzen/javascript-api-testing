@@ -7,6 +7,7 @@ describe('Testing Beers', function () {
 
       .then(function (response) {
         expect(response).to.be.json;
+        expect(response.statusCode).to.equal(200);
         expect(response.body[0].id).to.equal(1);
       });
   });
