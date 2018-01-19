@@ -1,11 +1,11 @@
-const gulp = require('gulp'); // eslint-disable-line import/no-extraneous-dependencies
+const gulp = require('gulp');
 const mocha = require('gulp-mocha');
 const sourcemaps = require('gulp-sourcemaps');
 const argv = require('yargs').argv;
 
 gulp.task('test-api', () => {
   process.env.env = argv.env;
-  const testsToRun = argv.spec ? 'test/' + argv.spec : 'test/*.test.js'
+  const testsToRun = argv.spec ? 'test/' + argv.spec : 'test/*.test.js';
 
   gulp.src(testsToRun, {read: false})
     .pipe(sourcemaps.init())
