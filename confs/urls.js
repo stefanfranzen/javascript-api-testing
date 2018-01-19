@@ -1,7 +1,10 @@
+const apiVersion = 'v1';
+
 module.exports = {
   urls: {
-    dev: 'https://api.punkapi.com/v2',
-    staging: 'https://api.punkapi.com/v2',
-    prod: 'https://api.punkapi.com/v2',
+    local: `http://api.qrserver.com/${apiVersion}`,
+    dev: `http://api.qrserver.com/${apiVersion}`,
+    staging: `http://api.qrserver.com/${apiVersion}`,
+    prod: `http://api.qrserver.com/${apiVersion}`,
   },
 };
