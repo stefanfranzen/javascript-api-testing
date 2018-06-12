@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sjansson/checking.git"
+    "url": "git+https://github.com/sjansson/javascript-api-testing.git"
   },
   "scripts": {
     "test": "mocha --compilers js:babel-register",
